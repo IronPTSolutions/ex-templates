@@ -1,0 +1,24 @@
+<h1>Users:</h1>
+
+{{!-- hola --}}
+<ul>
+  {{#each users as |user| }}
+    <li class="{{#if user.isAdmin }}admin{{/if}} {{#if user.isAdmin }}admin{{/if}}">
+      {{ user.name }} - {{ user.email }}
+
+      {{#if user.isAdmin }}
+        admin!!!
+      {{else}}
+        nope :(
+      {{/if}}
+
+
+    {{#unless user.isAdmin }}
+      nope :(
+    {{else}}
+      admin!!!
+    {{/unless}}
+    
+      </li>
+  {{/each}}
+</ul>
